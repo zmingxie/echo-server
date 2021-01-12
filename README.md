@@ -1,4 +1,5 @@
 # echo-server
+[![docker pull](https://img.shields.io/docker/pulls/mxie/echo-server)](https://hub.docker.com/r/mxie/echo-server)
 
 A simple Nginx + Lua echo server
 
@@ -28,11 +29,11 @@ spec:
         image: mxie/echo-server
         resources:
           limits:
-            cpu: "1"
+            cpu: "100m"
             memory: "128Mi"
           requests:
-            cpu:  "1"
-            memory: "128Mi"
+            cpu:  "50m"
+            memory: "64Mi"
         ports:
         - name: http
           containerPort: 8080
